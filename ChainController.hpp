@@ -17,14 +17,13 @@
 #include "AbstractChainElement.hpp"
 #include "MyDataObject.hpp"
 #include <vector>
-#include <bits/unique_ptr.h>
 
 using namespace std;
 
 class ChainController {
 private:
-    vector<unique_ptr<AbstractChainElement>> chainUnits;
-    unique_ptr<MyDataObject> myData;
+    vector<AbstractChainElement *> chainUnits;
+    MyDataObject * myData;
 public:
     ChainController();
     void start();
